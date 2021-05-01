@@ -146,7 +146,7 @@ def farm():
 
 if __name__ == "__main__":
     global token
-    os.system("cls")
+    os.system('cls' if os.name == 'nt' else 'clear')
     print(
         "Вас приветствует бот для Рабство 2.0 / vk.com/watershack\n" +
         "   Version: 1.0.0\n" +
@@ -159,7 +159,7 @@ if __name__ == "__main__":
     token = input("\nВведите цифру команду: ")
 
     if token == "1" or token == "token":
-        os.system('cls')
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("Вы успешно зашли в меню редактирования токена\n")
         newtoken = input("Введите ваш новый токен: ")
         infile = open('config.json', 'r+')
@@ -176,7 +176,7 @@ if __name__ == "__main__":
         com = input()
         execfile("bot.py")
     if token == "2" or token == "run":
-        os.system("cls")
+        os.system('cls' if os.name == 'nt' else 'clear')
         with open("config.json") as f:
             try:
                 config = load(f)
@@ -200,7 +200,7 @@ if __name__ == "__main__":
             asdasda = input("Нажмите любую кнопку для продолжения...")
             execfile("bot.py")
     if token == "3" or token == "error":
-        os.system("cls")
+        os.system('cls' if os.name == 'nt' else 'clear')
         print(
             "Возможные ошибки:\n" +
             "   1. '- | Ошибка':\n" +
@@ -209,7 +209,7 @@ if __name__ == "__main__":
         newcom = input("\nНажмите любую кнопку для продолжения...")
         execfile("bot.py")
     if token == "4" or token == "ask":
-        os.system("cls")
+        os.system('cls' if os.name == 'nt' else 'clear')
         print(
             '1. Открываешь приложение: "F12"' +
             '\n2. В гугл вводишь "ВК"' +
