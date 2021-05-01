@@ -1,3 +1,4 @@
 requests
 fake-useragent
 python-time
+os-sys
